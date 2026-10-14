@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ธัญชนก สุขทั่วญาติ - Academic Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Prompt', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3b4b6b', // Dark blue from the image
+                        accent: '#c09a72',  // Gold/Brownish from the image
+                        light: '#f3f4f6',   // Light gray background
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for the timeline */
+        .timeline-container {
+            position: relative;
+            padding-left: 2rem;
+        }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: 0.5rem;
+            bottom: 0;
+            width: 2px;
+            background-color: #cbd5e1; /* slate-300 */
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1.85rem;
+            top: 0.3rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: white;
+            border: 2px solid #3b4b6b; /* primary color */
+            z-index: 10;
+        }
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800 antialiased selection:bg-accent selection:text-white">
+
+    <div class="min-h-screen max-w-5xl mx-auto md:py-10 md:px-6">
+        <!-- Main Card Container -->
+        <div class="bg-white md:rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row min-h-[800px]">
+            
+            <!-- Left Sidebar -->
+            <aside class="w-full md:w-[35%] bg-light flex flex-col relative z-10 border-r border-gray-200">
+                <!-- Top Primary Color Bar (Mobile) / Header bg (Desktop) -->
+                <div class="h-4 w-full bg-primary md:h-12 absolute top-0 left-0"></div>
+                
+                <div class="pt-12 md:pt-20 px-8 pb-10 flex flex-col h-full z-20">
+                    
+                    <!-- Profile Picture -->
+                    <div class="flex justify-center mb-6">
+                        <div class="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white shadow-md relative">
+                            <!-- Using a placeholder since I cannot extract the exact image file, please replace with actual image URL -->
+                            <img src="https://placehold.co/400x400/3b4b6b/ffffff?text=TS" alt="Thanchano Sukthuayat Profile" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Name & Title -->
+                    <div class="text-center mb-8">
+                        <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">ธัญชนก สุขทั่วญาติ</h1>
+                        <div class="inline-block bg-primary text-white text-sm tracking-widest px-4 py-1 rounded-sm uppercase">
+                            THANCHANOK SUKTHUAYAT
+                        </div>
+                    </div>
+
+                    <!-- Contact Section -->
+                    <div class="mb-8">
+                        <h2 class="text-xl font-bold text-accent mb-4 border-b-2 border-accent/20 pb-2 inline-block">ติดต่อ</h2>
+                        <ul class="space-y-4 text-sm">
+                            <li class="flex items-start">
+                                <div class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 shrink-0 mt-0.5">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <span class="pt-1.5">(+66)06-1293-9331</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 shrink-0 mt-0.5">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <span class="pt-1.5 break-all">69202302042@scphkk.ac.th</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 shrink-0 mt-0.5">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <span class="pt-1.5">187 หมู่3 ต.หนองไผ่ อ.เมือง จ.ชัยภูมิ 36240</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- About Me Section -->
+                    <div class="mb-8">
+                        <h2 class="text-xl font-bold text-accent mb-4 border-b-2 border-accent/20 pb-2 inline-block">เกี่ยวกับฉัน</h2>
+                        <p class="text-gray-700 leading-relaxed text-sm">
+                            สุภาพ เรียบร้อย อ่อนโยน สดใส ร่าเริง เป็นมิตร
+                        </p>
+                    </div>
+
+                    <!-- Education Section -->
+                    <div class="mb-4 flex-grow">
+                        <h2 class="text-xl font-bold text-accent mb-4 border-b-2 border-accent/20 pb-2 inline-block">ประวัติการศึกษา</h2>
+                        <ul class="space-y-4">
+                            <li class="relative pl-4 border-l-2 border-primary/30">
+                                <div class="absolute w-2 h-2 bg-primary rounded-full -left-[5px] top-2"></div>
+                                <h3 class="font-semibold text-gray-800 text-sm">ระดับปริญญาตรี: วิทยาลัยการสาธารณสุขสิรินธร</h3>
+                                <p class="text-xs text-gray-500 mt-1">ปี 2026 - ปัจจุบัน</p>
+                            </li>
+                            <li class="relative pl-4 border-l-2 border-primary/30">
+                                <div class="absolute w-2 h-2 bg-primary rounded-full -left-[5px] top-2"></div>
+                                <h3 class="font-semibold text-gray-800 text-sm">โรงเรียนมัธยมปลาย: โรงเรียนหนองไผ่วิทยานุสรณ์</h3>
+                                <p class="text-xs text-gray-500 mt-1">ปี 2023 - 2025</p>
+                            </li>
+                            <li class="relative pl-4 border-l-2 border-primary/30">
+                                <div class="absolute w-2 h-2 bg-primary rounded-full -left-[5px] top-2"></div>
+                                <h3 class="font-semibold text-gray-800 text-sm">โรงเรียนมัธยมต้น: โรงเรียนหนองไผ่วิทยานุสรณ์</h3>
+                                <p class="text-xs text-gray-500 mt-1">ปี 2020 - 2022</p>
+                            </li>
+                            <li class="relative pl-4 border-l-2 border-transparent">
+                                <div class="absolute w-2 h-2 bg-primary rounded-full -left-[5px] top-2"></div>
+                                <h3 class="font-semibold text-gray-800 text-sm">โรงเรียนประถมศึกษา: โรงเรียนไตรราษฎร์สามัคคีวิทยา</h3>
+                                <p class="text-xs text-gray-500 mt-1">ปี 2014 - 2019</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Right Main Content -->
+            <main class="w-full md:w-[65%] bg-white p-8 md:p-12 lg:p-16 relative">
+                
+                <!-- Awards / Experience Section (Timeline) -->
+                <section class="mb-16">
+                    <h2 class="text-2xl font-bold text-accent mb-8 pb-2 inline-block relative">
+                        รางวัลที่ได้รับ
+                        <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-accent rounded-full"></span>
+                    </h2>
+                    
+                    <div class="timeline-container">
+                        <!-- Item 1 -->
+                        <div class="timeline-item">
+                            <h3 class="font-bold text-gray-800 text-lg mb-1">วันที่ 1-18 เดือนตุลาคม พ.ศ 2567</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                ได้เข้ารับการฝึกประสบการณ์จิตอาสาด้านการแพทย์และสาธารณสุข
+                            </p>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="timeline-item">
+                            <h3 class="font-bold text-gray-800 text-lg mb-1">26 มิถุนายน พ.ศ 2567</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                ได้รับรางวัลชมเชย การแข่งขันแต่งคำขวัญ ระดับชั้นมัธยมศึกษาตอนปลาย เนื่องในกิจกรรมวันสุนทรภู่ วันภาษาไทยแห่งชาติ
+                            </p>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="timeline-item">
+                            <h3 class="font-bold text-gray-800 text-lg mb-1">20 สิงหาคม พ.ศ 2567</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                ได้รับรางวัลรองชนะเลิศอันดับ 1 ในการแข่งขันประกวดชุด Recycle เนื่องในงานกิจกรรมวันวิทยาศาสตร์
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills Section -->
+                <section>
+                    <h2 class="text-2xl font-bold text-accent mb-8 pb-2 inline-block relative">
+                        ทักษะ
+                        <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-accent rounded-full"></span>
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-center space-x-3 bg-gray-50 p-4 rounded-lg shadow-sm border border-gray-100 hover:border-accent/30 hover:shadow-md transition duration-300">
+                            <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                                <i class="fas fa-volleyball-ball"></i>
+                            </div>
+                            <span class="font-medium text-gray-700">เล่นกีฬา</span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-3 bg-gray-50 p-4 rounded-lg shadow-sm border border-gray-100 hover:border-accent/30 hover:shadow-md transition duration-300">
+                            <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                                <i class="fas fa-theater-masks"></i>
+                            </div>
+                            <span class="font-medium text-gray-700">ศิลปะการแสดง</span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-3 bg-gray-50 p-4 rounded-lg shadow-sm border border-gray-100 hover:border-accent/30 hover:shadow-md transition duration-300">
+                            <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <span class="font-medium text-gray-700">มีความคิดสร้างสรรค์</span>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Bottom Decorative Bar -->
+                <div class="h-4 md:h-6 w-full bg-primary absolute bottom-0 left-0"></div>
+            </main>
+        </div>
+    </div>
+    
+</body>
+</html>
